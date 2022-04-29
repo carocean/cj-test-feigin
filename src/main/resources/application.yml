@@ -1,0 +1,44 @@
+server:
+  port: 8077
+spring:
+  application:
+    name: eureka-feign-client
+  mvc:
+    pathmatch:
+      #如果不指定报错：at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns
+      matching-strategy: ant_path_matcher
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka8761:8761/eureka
+    enabled: true
+  instance:
+    prefer-ip-address: true
+    #feign必须命名一个实例名
+    appname: eureka-feign-client
+    #注册中心点状态跳转到swagger
+    status-page-url: http://${spring.cloud.client.ip-address}:${server.port}/doc.html
+
+life:
+  swagger:
+    #    defaultGroupName: 默认能力（所有）
+    enabled: true
+    #所有api的最大版本，用于生成组。
+    #在knife4j上展示的分组
+    maxVersion: 4
+    basePackage:
+    apiInfo:
+      title: 用户中心
+      description: 中台/用户中心
+      contact: cj 18023457655
+      url:
+      email: zhaoxiangbin_2005@126.com
+      version: 1.0.0
+  responseMsg:
+    - code: 200
+      message: OK
+    - code: 500
+      message: 内部错误
+

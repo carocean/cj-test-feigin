@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cj.life</groupId>
+        <artifactId>cj-life-ultimate</artifactId>
+        <!--不要指定为snapshots版。只指定正式版，会依据父pom的环境而变化-->
+        <version>0.0.1</version>
+        <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
+    </parent>
+    <groupId>cj.test</groupId>
+    <artifactId>cj-test-feigin</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>cj-test-feigin</name>
+    <description>cj-test-feigin</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>cj.life</groupId>
+            <artifactId>cj-life-ability-banner</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>cj.life</groupId>
+            <artifactId>cj-life-ability-util</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>cj.life</groupId>
+            <artifactId>cj-life-ability-feign</artifactId>
+            <version>0.0.1</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>cj.life</groupId>
+            <artifactId>cj-life-ability-swagger</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>cj.life</groupId>
+            <artifactId>cj-life-ability-api</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
