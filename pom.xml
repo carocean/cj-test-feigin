@@ -44,7 +44,11 @@
             <artifactId>cj-life-ability-api</artifactId>
             <version>0.0.1</version>
         </dependency>
-
+        <dependency>
+            <groupId>cj.life.middle</groupId>
+            <artifactId>cj-life-middle-uc-framework</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

@@ -1,0 +1,5 @@
+life:
+  feign:
+    docker:
+      external:
+        url: localhost:30000

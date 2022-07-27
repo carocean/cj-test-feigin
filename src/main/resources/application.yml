@@ -7,12 +7,14 @@ spring:
     pathmatch:
       #如果不指定报错：at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns
       matching-strategy: ant_path_matcher
+  profiles:
+    active: dev
 eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://eureka8761:8761/eureka
+      defaultZone: http://localhost:8761/eureka
     enabled: true
   instance:
     prefer-ip-address: true
@@ -30,8 +32,8 @@ life:
     maxVersion: 4
     basePackage:
     apiInfo:
-      title: 用户中心
-      description: 中台/用户中心
+      title: 测试
+      description: 中台/测试
       contact: cj 18023457655
       url:
       email: zhaoxiangbin_2005@126.com
